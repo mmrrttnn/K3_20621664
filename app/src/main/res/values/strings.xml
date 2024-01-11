@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">K3_20621664</string>
+    <string name="btnCitizen">Citizen Insurance</string>
+    <string name="btnHome">Home Insurance</string>
+    <string name="btnLife">Life Insurance</string>
+    <string name="btnSave">Save</string>
+    <string name="btnCancel">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
