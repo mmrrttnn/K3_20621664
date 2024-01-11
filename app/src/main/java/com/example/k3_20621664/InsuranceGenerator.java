@@ -8,9 +8,9 @@ public class InsuranceGenerator {
         ArrayList<Insurance> items = new ArrayList<>();
         Random random = new Random();
         for(int i = 1; i <= count; i++) {
-            String type = insuranceType + 1;
+            String type = insuranceType + i;
             items.add(new Insurance(type, 10L + random.nextDouble() % 99L, "Active", 10L + random.nextDouble() % 99L));
         }
-        return items;
+        return items; //44 изпит
     }
 }

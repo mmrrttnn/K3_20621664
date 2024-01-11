@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -82,7 +83,9 @@ public class InsuranceFragment extends Fragment {
         status.setText(insurance.getInsuranceStatus());
         compensation.setText(String.valueOf(insurance.getInsuranceCompensation()));
 
-        //status.setEnabled(false);
+        status.setEnabled(false);
+
+        btnCancel.setEnabled(false);
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +105,8 @@ public class InsuranceFragment extends Fragment {
                 if(listener != null){
                     listener.onInsuranceUpdated(insurance);
                 }
+                
+                getParentFragmentManager().beginTransaction().remove(InsuranceFragment.this).commit();
             }
         });
     }
